@@ -1,13 +1,18 @@
 import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Loader } from '@/shared/ui';
+import LayoutComponent from '@/shared/layout';
 import HomePage from '@/pages/Home';
 function Root() {
 	return (
 		<Suspense fallback={<Loader />}>
 			<Routes>
-				{/* home */}
-				<Route path={'/'} element={<HomePage />} />
+				<Route path={'/dashboard'} element={<LayoutComponent />}>
+					<Route path={''} element={<HomePage />} />
+					<Route path={'expenses'} element={<HomePage />} />
+					<Route path={'Бухгалтерия'} element={<HomePage />} />
+				</Route>
+
 				<Route
 					path={'*'}
 					element={

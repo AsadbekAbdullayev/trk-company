@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import store from '@redux/store/store.ts';
 import Routes from './routing/routes.tsx';
 import ProtectedRoute from './routing/ProtectedRoute.tsx';
+import { ConfigProvider } from 'antd';
 import './styles/index.css';
 import './i18n.ts';
 
@@ -21,9 +22,24 @@ createRoot(rootElement).render(
 		<QueryClientProvider client={queryClient}>
 			<Provider store={store}>
 				<QueryParamProvider adapter={ReactRouter6Adapter}>
-					<ProtectedRoute>
-						<Routes />
-					</ProtectedRoute>
+					<ConfigProvider
+						theme={{
+							components: {
+								Menu: {
+									colorItemBgHover: '#F8F9FA',
+									colorItemBgSelected: '#F8F9FA',
+									colorItemTextSelected: '#000',
+									colorItemText: '#919191',
+									fontSize: 16,
+									borderRadius: 6,
+								},
+							},
+						}}
+					>
+						<ProtectedRoute>
+							<Routes />
+						</ProtectedRoute>
+					</ConfigProvider>
 				</QueryParamProvider>
 			</Provider>
 		</QueryClientProvider>

@@ -1,9 +1,51 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import { ColumnDef } from '@tanstack/react-table';
+import { Table } from '@ui/index';
+
+type User = {
+	id: number;
+	name: string;
+	role: string;
+};
 
 const HomePage: React.FC = () => {
+	const data = useMemo<User[]>(
+		() => [
+			{ id: 1, name: 'John Doe', role: 'Admin' },
+			{ id: 2, name: 'Alice Smith', role: 'Editor' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+		],
+		[],
+	);
+	const columns = useMemo<ColumnDef<User>[]>(
+		() => [
+			{
+				accessorKey: 'name',
+				header: 'Name',
+				size: 200,
+			},
+			{
+				accessorKey: 'role',
+				header: 'Role',
+			},
+			{
+				id: 'expander',
+				header: 'expander',
+				cell: ({ row }) => (
+					<button
+						className="text-blue-500 hover:underline"
+						onClick={() => row.toggleExpanded()}
+					>
+						{row.getIsExpanded() ? 'Hide' : 'Show'}
+					</button>
+				),
+			},
+		],
+		[],
+	);
 	return (
-		<div className="bg-slate-600 text-white w-full h-screen flex items-center justify-center">
-			HomePage
+		<div className="w-full h-screen">
+			<Table columns={columns} data={data} />
 		</div>
 	);
 };
