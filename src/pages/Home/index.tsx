@@ -14,6 +14,45 @@ const HomePage: React.FC = () => {
 			{ id: 1, name: 'John Doe', role: 'Admin' },
 			{ id: 2, name: 'Alice Smith', role: 'Editor' },
 			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
+			{ id: 3, name: 'Bob Johnson', role: 'Viewer' },
 		],
 		[],
 	);
@@ -22,7 +61,27 @@ const HomePage: React.FC = () => {
 			{
 				accessorKey: 'name',
 				header: 'Name',
-				size: 200,
+				width: 100,
+			},
+			{
+				accessorKey: 'role',
+				header: 'Role',
+			},
+			{
+				accessorKey: 'role',
+				header: 'Role',
+			},
+			{
+				accessorKey: 'role',
+				header: 'Role',
+			},
+			{
+				accessorKey: 'role',
+				header: 'Role',
+			},
+			{
+				accessorKey: 'role',
+				header: 'Role',
 			},
 			{
 				accessorKey: 'role',
@@ -45,7 +104,7 @@ const HomePage: React.FC = () => {
 	);
 	return (
 		<div className="w-full h-screen">
-			<Table columns={columns} data={data} />
+			{/* <Table columns={columns} data={data} /> */}
 		</div>
 	);
 };

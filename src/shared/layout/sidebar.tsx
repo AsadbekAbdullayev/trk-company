@@ -1,4 +1,4 @@
-import { Layout, Menu, Input } from 'antd';
+import { Layout, Menu, Input, Empty } from 'antd';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import Logo from '@/assets/icons/logo.svg';
@@ -67,16 +67,24 @@ const SidebarComponent = () => {
 					value={searchTerm}
 				/>
 				<div className="h-full max-h-[622px] overflow-y-auto mt-5">
-					<Menu
-						mode="inline"
-						className="!h-full !w-full !border-none "
-						selectedKeys={[location.pathname.replace('/', '')]}
-						onClick={(e) => handleMenu(e.key)}
-						items={filteredMenuItems.map((item: any) => ({
-							...item,
-							icon: item.icon(location.pathname.replace('/', '') === item.key),
-						}))}
-					/>
+					{filteredMenuItems.length === 0 && searchTerm ? (
+						<div className="flex items-start justify-center h-full pt-8">
+							<Empty description="Menu topilmadi" />
+						</div>
+					) : (
+						<Menu
+							mode="inline"
+							className="!h-full !w-full !border-none "
+							selectedKeys={[location.pathname.replace('/', '')]}
+							onClick={(e) => handleMenu(e.key)}
+							items={filteredMenuItems.map((item: any) => ({
+								...item,
+								icon: item.icon(
+									location.pathname.replace('/', '') === item.key,
+								),
+							}))}
+						/>
+					)}
 				</div>
 
 				<div className="w-full flex flex-col gap-[6px] items-center justify-center py-16">

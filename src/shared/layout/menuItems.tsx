@@ -1,6 +1,3 @@
-import { ChildProcess } from 'child_process';
-import { Children } from 'react';
-
 export const menuItems = [
 	{
 		key: 'dashboard',
@@ -18,10 +15,10 @@ export const menuItems = [
 				/>
 			</svg>
 		),
-		label: 'Dashboard',
+		label: 'Дашбоард',
 	},
 	{
-		key: 'dashboard/Активлар',
+		key: 'actives',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +70,7 @@ export const menuItems = [
 		children: [],
 	},
 	{
-		key: 'dashboard/Бухгалтерия',
+		key: 'accounting',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +140,7 @@ export const menuItems = [
 		label: 'Бухгалтерия',
 	},
 	{
-		key: 'dashboard/Стратегия',
+		key: 'strategy',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +158,7 @@ export const menuItems = [
 		label: 'Стратегия',
 	},
 	{
-		key: 'dashboard/Кафиллик',
+		key: 'warranty',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +210,7 @@ export const menuItems = [
 		label: 'Кафиллик',
 	},
 	{
-		key: 'dashboard/Скоринг',
+		key: 'scoring',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -253,7 +250,7 @@ export const menuItems = [
 		children: [],
 	},
 	{
-		key: 'dashboard/Компенсация',
+		key: 'compensation',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -288,7 +285,7 @@ export const menuItems = [
 		label: 'Компенсация',
 	},
 	{
-		key: 'dashboard/Марказ',
+		key: 'center',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -375,7 +372,7 @@ export const menuItems = [
 		children: [],
 	},
 	{
-		key: 'dashboard/Мониторинг',
+		key: 'monitoring',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -393,7 +390,7 @@ export const menuItems = [
 		label: 'Мониторинг',
 	},
 	{
-		key: 'dashboard/Муаммоли-активлар',
+		key: 'troubled-actives',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -421,7 +418,7 @@ export const menuItems = [
 		label: 'Муаммоли активлар',
 	},
 	{
-		key: 'dashboard/Худудлар',
+		key: 'territories',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -457,7 +454,7 @@ export const menuItems = [
 		children: [],
 	},
 	{
-		key: 'dashboard/Хисоботлар',
+		key: 'reports',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -499,7 +496,7 @@ export const menuItems = [
 		label: 'Хисоботлар',
 	},
 	{
-		key: 'dashboard/Созламалар',
+		key: 'settings',
 		icon: (isActive: boolean) => (
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -518,7 +515,7 @@ export const menuItems = [
 		children: [],
 	},
 	{
-		key: 'dashboard/Inbox',
+		key: 'inbox',
 		disable: true,
 		icon: (isActive: boolean) => (
 			<svg
